@@ -3,7 +3,6 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2024 at 03:36 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,6 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Table structure for table `approved_requests_tbl`
 --
 
@@ -190,12 +190,15 @@ INSERT INTO `students_tbl` (`StudentID`, `UserID`, `DepartmentID`, `Program`, `Y
 -- --------------------------------------------------------
 
 --
+=======
+>>>>>>> 3882135796806cc7c3b808254f602d622a13ded6
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(30) NOT NULL,
   `username` varchar(30) NOT NULL,
+<<<<<<< HEAD
   `password` varchar(30) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
@@ -204,12 +207,18 @@ CREATE TABLE `users` (
   `role` varchar(30) NOT NULL,
   `reset_token` varchar(255) NOT NULL,
   `reset_token_expiry` datetime DEFAULT NULL
+=======
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `role` varchar(30) NOT NULL
+>>>>>>> 3882135796806cc7c3b808254f602d622a13ded6
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
+<<<<<<< HEAD
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `email`, `phone`, `role`, `reset_token`, `reset_token_expiry`) VALUES
 (3, 'bedonaf', 'password', 'Bedasa', 'Wayessa', 'bedonaf@gmail.com', 0, 'admin', '', NULL),
 (4, 'bedasa', 'password', 'Bedasa', 'Wayessa', 'bedonaf2023@gmail.com', 935736649, 'admin', '4b6af6b7c229c927847dced1c595f8ece17c79477e65dfaf9590da8f86527f38', '2024-04-28 13:27:24'),
@@ -243,12 +252,17 @@ INSERT INTO `users_tbl` (`UserID`, `UserName`, `FirstName`, `LastName`, `PhoneNu
 (4, 'admin', 'Bedasa', 'Wayessa', '0935736649', 'bedonaf2025@gmail.com', '$2y$10$.1HO55.JMBDNUy26QurRUOQO8riztx5yfh2Cvq1379a92neJmgyci', 'admin'),
 (5, 'hod', 'Bedasa', 'Wayessa', '0935736649', 'bedonaf2026@gmail.com', '$2y$10$noB/bTBNHy30.QfhhIYWae5lbZzezBmjylk8Rh4P8nmS4qCgrAiqi', 'instructor'),
 (6, 'kabe', 'Kabe', 'Sori', '0935736649', 'kabe@gmail.com', '$2y$10$dPWEw9T78HoiE8GycmNWdOyloHQk3HBlWwn5oRBNw3NWC6BhNgftC', 'student');
+=======
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
+(3, 'bedonaf', 'bedonaf@gmail.com', 'password', 'admin');
+>>>>>>> 3882135796806cc7c3b808254f602d622a13ded6
 
 --
 -- Indexes for dumped tables
 --
 
 --
+<<<<<<< HEAD
 -- Indexes for table `approved_requests_tbl`
 --
 ALTER TABLE `approved_requests_tbl`
@@ -298,22 +312,28 @@ ALTER TABLE `students_tbl`
   ADD KEY `student_user_id` (`UserID`);
 
 --
+=======
+>>>>>>> 3882135796806cc7c3b808254f602d622a13ded6
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+<<<<<<< HEAD
 -- Indexes for table `users_tbl`
 --
 ALTER TABLE `users_tbl`
   ADD PRIMARY KEY (`UserID`);
 
 --
+=======
+>>>>>>> 3882135796806cc7c3b808254f602d622a13ded6
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT for table `approved_requests_tbl`
 --
 ALTER TABLE `approved_requests_tbl`
@@ -396,6 +416,12 @@ ALTER TABLE `clearances_tbl`
 ALTER TABLE `students_tbl`
   ADD CONSTRAINT `student_department_id` FOREIGN KEY (`DepartmentID`) REFERENCES `departments_tbl` (`DepartmentID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `student_user_id` FOREIGN KEY (`UserID`) REFERENCES `users_tbl` (`UserID`) ON DELETE NO ACTION;
+=======
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 3882135796806cc7c3b808254f602d622a13ded6
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
