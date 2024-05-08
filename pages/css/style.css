@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    /* color: rgba(236, 236, 236, 0.929); */
+    /* background-color: rgba(255, 255, 255, 0.49); */
+    min-height: 10vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    
+
+}
+
+#sidebar {
+    width: 200px;
+    background: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+    transition: width 1s ease;
+}
+
+
+header {
+    position: relative;
+    background-color: #333; /* Background color for the header */
+    color: rgba(251, 250, 250, 0.995); /* Text color for the header */
+    padding: 10px; /* Padding around the header content */
+    text-align: center; /* Center-align the header content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle lift effect */
+}
+header h1{
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #666;
+}
+
+.sub-menu {
+    display: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.sub-menu.open {
+    display: block;
+    max-height: 200px; /* Adjust max-height value based on content height */
+    animation-name: fadeIn;
+}
+
+
+.sub-menu li {
+    margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* for login page */
+.login-div{
+    display: flex; 
+    align-content: center; 
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid var(--main-blue);
+    height: 100vh;
+    margin: auto;
+}
+.login-info{
+    padding: 20px;
+    margin-top: auto;
+    margin: 8px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    flex: 1;
+
+}
+.login-form{
+    padding: 20px;
+    margin: 8px;
+    margin-top: auto;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    flex: 1;
+}
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .login-div{
+        display: block;
+        padding: 20px;
+        margin-top: 3rem;
+        justify-content: center;
+        align-content: center; 
+        align-items: center;
+        height: 100vh;
+
+    }
+    .login-info{
+        display: none;
+    }
+    /*    .login-info {
+            flex-basis: 100%;
+        }
+    
+        .login-form {
+            flex-basis: 100%;
+        }*/
+}
+
+.content{
+    display: block;
+    height: 100vh;
+    padding: 10px;
+}
+
+/*for add new user form */
+
+.addNewUserForm{
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    flex: 1;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .addNewUserForm{
+        display: block;
+    }
+    .items{
+        flex-basis: 100%;
+        padding: 0px;
+    }
+    #sidebar {
+        width: 130px;
+        transition: width 1s ease;
+    }
+}
