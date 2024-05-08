@@ -1,4 +1,5 @@
-# clearances_experiences
+<h1> Student Clearances Project</h1>
+
  This is simple a repository descriptions
 
 <h1> Login Page </h1>
@@ -11,7 +12,7 @@
 
 <h1> Admin Page </h1>
 <p>username:admin</p>
-<>Password:admin</p>
+<p>Password:admin</p>
 
 <h3> Some information of the admin page </h3>
 
@@ -25,13 +26,13 @@
 
 <h1> Student Page </h1>
 <p>username:bedasa1</p>
-<>Password:password</p>
+<p>Password:password</p>
 
 ![Student_Page](images/student_page_1.png)
 
 <h1> HOD Page </h1>
 <p>username:hod</p>
-<>Password:hod</p>
+<p>Password:hod</p>
 <h3> Some information of the HOD page </h3>
 
 ![hod_Page](images/hod_page_1.png)
